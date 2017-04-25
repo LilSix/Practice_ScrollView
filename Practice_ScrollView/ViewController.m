@@ -44,4 +44,10 @@
 }
 
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSInteger currentPage = ((scrollView.contentOffset.x - scrollView.frame.size.width / 2) / scrollView.frame.size.width) + 1;
+    NSLog(@"currentPage = %ld", currentPage);
+    [_pageControl setCurrentPage:currentPage];
+}
+
 @end
