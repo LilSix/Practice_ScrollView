@@ -23,7 +23,7 @@
                                                             _scrollView.frame.size.height)];
     view.backgroundColor = [UIColor redColor];
     
-    UIView *view2 = [[UIView alloc] initWithFrame:CGRectMake(375,
+    UIView *view2 = [[UIView alloc] initWithFrame:CGRectMake(_scrollView.frame.size.width,
                                                              0,
                                                              _scrollView.frame.size.width,
                                                              _scrollView.frame.size.height)];
