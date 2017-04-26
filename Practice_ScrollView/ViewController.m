@@ -17,24 +17,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0,
-                                                            0,
-                                                            _scrollView.frame.size.width,
-                                                            _scrollView.frame.size.height)];
-    view.backgroundColor = [UIColor redColor];
-    
-    UIView *view2 = [[UIView alloc] initWithFrame:CGRectMake(_scrollView.frame.size.width,
-                                                             0,
-                                                             _scrollView.frame.size.width,
-                                                             _scrollView.frame.size.height)];
-    view2.backgroundColor = [UIColor blueColor];
-    
-    _scrollView.contentSize = CGSizeMake(view.bounds.size.width * 2, view.bounds.size.height);
-    _scrollView.pagingEnabled = YES;
-    
     _scrollView.delegate = self;
-    [_scrollView addSubview:view];
-    [_scrollView addSubview:view2];
+//    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0,
+//                                                            0,
+//                                                            _scrollView.frame.size.width,
+//                                                            _scrollView.frame.size.height)];
+//    view.backgroundColor = [UIColor redColor];
+//    
+//    UIView *view2 = [[UIView alloc] initWithFrame:CGRectMake(_scrollView.frame.size.width,
+//                                                             0,
+//                                                             _scrollView.frame.size.width,
+//                                                             _scrollView.frame.size.height)];
+//    view2.backgroundColor = [UIColor blueColor];
+//    
+//    _scrollView.contentSize = CGSizeMake(view.bounds.size.width * 2, view.bounds.size.height);
+//    _scrollView.pagingEnabled = YES;
+//
+//    [_scrollView addSubview:view];
+//    [_scrollView addSubview:view2];
 }
 
 
@@ -45,8 +45,9 @@
 
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    NSInteger currentPage = ((scrollView.contentOffset.x - scrollView.frame.size.width / 2) / scrollView.frame.size.width) + 1;
-    NSLog(@"currentPage = %ld", currentPage);
+    // When scrollView scroll to 3/4 and page control move to next point.
+    NSInteger currentPage = ((scrollView.contentOffset.x - scrollView.frame.size.width * 0.75) /
+                             scrollView.frame.size.width) + 1;
     [_pageControl setCurrentPage:currentPage];
 }
 

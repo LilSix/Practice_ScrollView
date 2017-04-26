@@ -18,28 +18,71 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="750" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8P-zg-NpM">
-                                <rect key="frame" x="16" y="20" width="343" height="627"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8P-zg-NpM">
+                                <rect key="frame" x="0.0" y="0.0" width="750" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1OB-bK-WR9">
+                                        <rect key="frame" x="0.0" y="0.0" width="750" height="667"/>
+                                        <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MfY-cp-Ned">
+                                        <rect key="frame" x="375" y="0.0" width="750" height="667"/>
+                                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="MfY-cp-Ned" firstAttribute="top" secondItem="k8P-zg-NpM" secondAttribute="top" id="0vy-3U-RQa"/>
+                                    <constraint firstAttribute="bottom" secondItem="1OB-bK-WR9" secondAttribute="bottom" id="7R9-BP-eop"/>
+                                    <constraint firstItem="1OB-bK-WR9" firstAttribute="top" secondItem="k8P-zg-NpM" secondAttribute="top" id="Afu-zu-weh"/>
+                                    <constraint firstAttribute="trailing" secondItem="1OB-bK-WR9" secondAttribute="trailing" constant="375" id="XZU-cf-N9t"/>
+                                    <constraint firstAttribute="trailing" secondItem="MfY-cp-Ned" secondAttribute="trailing" id="ntf-xV-uhh"/>
+                                    <constraint firstAttribute="bottom" secondItem="MfY-cp-Ned" secondAttribute="bottom" id="qtA-2G-dZc"/>
+                                    <constraint firstItem="MfY-cp-Ned" firstAttribute="leading" secondItem="k8P-zg-NpM" secondAttribute="leading" constant="375" id="vab-EA-Xa0"/>
+                                    <constraint firstItem="1OB-bK-WR9" firstAttribute="leading" secondItem="k8P-zg-NpM" secondAttribute="leading" id="yJQ-ff-wZH"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                        <size key="value" width="750" height="667"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="rect" keyPath="frame">
+                                        <rect key="value" x="0.0" y="0.0" width="375" height="667"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="HTf-uN-2Eh">
-                                <rect key="frame" x="16" y="610" width="343" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="HTf-uN-2Eh">
+                                <rect key="frame" x="0.0" y="630" width="750" height="37"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="k8P-zg-NpM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2cr-PW-UdO"/>
+                            <constraint firstItem="k8P-zg-NpM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DdI-0P-PcX"/>
+                            <constraint firstItem="1OB-bK-WR9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Ibm-ZL-J5n"/>
+                            <constraint firstItem="HTf-uN-2Eh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OZd-ST-cts"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="k8P-zg-NpM" secondAttribute="bottom" id="Sqa-5C-6Zg"/>
+                            <constraint firstItem="MfY-cp-Ned" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="UlP-zs-uFN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HTf-uN-2Eh" secondAttribute="bottom" id="bP9-Js-5fI"/>
+                            <constraint firstItem="MfY-cp-Ned" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="brh-LK-uQo"/>
+                            <constraint firstAttribute="trailing" secondItem="HTf-uN-2Eh" secondAttribute="trailing" id="kHn-oi-9KD"/>
+                            <constraint firstItem="1OB-bK-WR9" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="nBG-yO-Fcz"/>
+                            <constraint firstAttribute="trailing" secondItem="k8P-zg-NpM" secondAttribute="trailing" id="yYY-OK-vRU"/>
+                        </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="750" height="667"/>
                     <connections>
                         <outlet property="pageControl" destination="HTf-uN-2Eh" id="9Nb-Vq-2QH"/>
                         <outlet property="scrollView" destination="k8P-zg-NpM" id="ase-c7-yQF"/>
+                        <outlet property="view1" destination="1OB-bK-WR9" id="fyV-fF-fDK"/>
+                        <outlet property="view2" destination="MfY-cp-Ned" id="Odk-33-17j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="137.18140929535232"/>
+            <point key="canvasLocation" x="139.19999999999999" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>
